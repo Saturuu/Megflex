@@ -4,14 +4,11 @@
 }
 
 ::-webkit-scrollbar-track {
-    transition: all 0.5s;
-    background-color: rgb(55, 55, 55);
-    margin-block: 6px;
-    border-radius: 10px;
+    display: none;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(151, 0, 0);
+    background-color: rgb(104, 104, 104);
     border-radius: 10px;
 }
 
@@ -59,7 +56,7 @@
     margin-inline: auto;
 
     max-width: 4150px;
-    height: 59px;
+    height: 49px;
     background-color: red;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.832);
     border-radius: 12px;
@@ -88,7 +85,7 @@
 }
 
 .NavBar .NavText, .SideBar .SideText {
-    height: 59px;
+    height: 49px;
     padding: 0 30px;
     display: flex;
     align-items: center;
@@ -98,7 +95,7 @@
     text-decoration: none;
     color: black;
     font-family: Bluffolk;
-    font-size: 32px;
+    font-size: 28px;
     transition: all 180ms;
 }
 
@@ -141,8 +138,8 @@
 }
 
 .SideBarBtn {
-    height: 36px;
-    width: 36px;
+    height: 40px;
+    width: 40px;
 
     padding: 0;
     background: none;
@@ -165,11 +162,11 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background-image: url("../IMGS/X.png");
+    background-image: url("../IMGS/Close.png");
 }
 
 .NavBar .SideBarBtn {
-    background-image: url("../IMGS/M.png");
+    background-image: url("../IMGS/Menu.png");
 }
 
 .NavBarContainer .MenuBtn {
@@ -191,30 +188,69 @@
     }
 }
 
-.CHIMG{
-    content:url("../IMGS/BAN1.jpg");
+.BannerBord {
+    justify-content: center;
+    margin-inline: auto;
+    position: relative;
     width: 100%;
     max-width: 4100px;
+    block-size: auto;
+    background-image: url("../IMGS/BAN1.jpg");
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
     animation: change 30s infinite ;
     animation-timing-function: linear;
+}
+
+.RefImgSize {
+    content:url("../IMGS/BAN2.jpg");
+    width: 100%;
+    max-width: 4100px;
+    height: auto;
+    border: 10px;
+
 
     display: flex;
     justify-content: center;
     margin-inline: auto;
+    opacity: 0;
 }
 
 @keyframes change{
+    0%
+    {
+        background-image: url("../IMGS/BAN1.jpg");
+    }
+    23%
+    {
+        background-image: url("../IMGS/BAN1.jpg");
+    }
     25%
     {
-        content:url("../IMGS/BAN1.jpg");
+        background-image: url("../IMGS/BAN2.jpg");
+    }
+    48%
+    {
+        background-image: url("../IMGS/BAN2.jpg");
     }
     50%
     {
-        content:url("../IMGS/BAN2.jpg");
+        background-image: url("../IMGS/BAN3.jpg");
     }
-    100%
+    73%
     {
-        content:url("../IMGS/BAN3.jpg");
+        background-image: url("../IMGS/BAN3.jpg");
+    }
+    75%
+    {
+        background-image: url("../IMGS/BAN4.jpg");
+    }
+    98%
+    {
+        background-image: url("../IMGS/BAN4.jpg");
     }
 }
 
@@ -331,10 +367,11 @@
 }
 
 .image-list img {
-    transition: all 0.5s;
+    transition: all 90ms;
 
-    height: 216px;
-    width: 372px;
+    height: 212px;
+    width: 368px;
+    margin: 2px;
     cursor: pointer;
     overflow: hidden;
     z-index: 1;
@@ -349,8 +386,9 @@
 }
 
 .image-list img:hover {
-    transform: rotate3d(1, 0, 0, 20deg);
-    box-shadow: 0 0 2px 2px rgba(220, 0, 0, 0.508);
+    height: 216px;
+    width: 372px;
+    margin: 0;
 }
 
 .VidContainer {
@@ -451,11 +489,11 @@
 }
 
 .VidContainer.full-screen .FullScreenBtn {
-    background-image: url("../IMGS/UNFU.png");
+    background-image: url("../IMGS/Fullscreen\ Exit.png");
 }
 
 .VidContainer:not(.full-screen) .FullScreenBtn { 
-    background-image: url("../IMGS/FU.png");
+    background-image: url("../IMGS/Fullscreen.png");
 }
 
 .VidContainer.mini-player .MiniPlayerBtn {
@@ -664,6 +702,8 @@
     height: fit-content;
     z-index: 4;
     padding: 1px;
+
+    display: none;
 }
 
 .SettingIcon {

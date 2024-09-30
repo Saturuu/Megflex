@@ -220,3 +220,20 @@ function HandleTimelineUpdate(e) {
         TimelineContainer.style.setProperty("--progress-position", percent);
     }
 }
+
+
+
+
+
+
+////// toggle Settings Menu //////
+
+const SettingsMenu = document.querySelector(".SettingsMenu");
+
+function toggleSettingsMenu() {
+    if (SettingsMenu.style.display === 'block') {
+        SettingsMenu.style.display = 'none'
+    } else {
+        SettingsMenu.style.display = 'block'
+    }
+}
