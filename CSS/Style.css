@@ -305,6 +305,11 @@
         display: none;
     }
 }
+@media(max-width: 452px){
+    .slider-wrapper .slide-button {
+        display: none;
+    }
+}
 
 .slider-wrapper .slide-button {
     transition: background-color 0.15s;
